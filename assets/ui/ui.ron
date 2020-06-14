@@ -1,0 +1,46 @@
+  
+#![enable(implicit_some)]
+Container(
+    transform: (
+        id: "background",
+        width: 125.0,
+        height: 30.0,
+        anchor: TopLeft,
+        pivot:TopLeft,
+    ),
+    background: SolidColor(0.0, 0.0, 0.0, 0.8),
+    children: [
+        Label(
+            transform: (
+                id: "fps",
+                width: 125.0,
+                height: 16.0,
+                anchor: TopLeft,
+                pivot: TopLeft,
+            ),
+            text: (
+                text: "FPS: N/A",
+                font: File("font/square.ttf", ("TTF", ())),
+                font_size: 16.0,
+                color: (1.0, 1.0, 1.0, 1.0),
+                align: TopLeft,
+            )
+        ),
+        Label(
+            transform: (
+                id: "bunny_count",
+                y: -17.0,
+                width: 125.0,
+                height: 12.0,
+                anchor: TopLeft,
+                pivot: TopLeft,            ),
+            text: (
+                text: "Bunnies: 0",
+                font: File("font/square.ttf", ("TTF", ())),
+                font_size: 12.0,
+                color: (1.0, 1.0, 1.0, 1.0),
+                align: TopLeft,
+            )
+        ),
+   ],
+)
